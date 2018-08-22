@@ -1,0 +1,24 @@
+<div class="container catsandstars">
+   
+ 
+    <form name="manageMdpForm" ng-submit="save(manageMdpForm.$valid)">
+       
+	   <div class="form-group">
+            <label>{{'SIGN_IN.MDP' | translate}}</label>
+                      			
+			<div class="input-group">
+				<input type="mail" name="mail" placeholder="" ng-model="managedMdp.mail" required class="form-control" maxlength="40" />
+				<span class="input-group-addon" id="basic-addon1">@</span>
+			</div>
+			<div ng-messages="managedMdpForm.mail.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+        </div>
+		
+        <p class="text-center">
+            <button type="submit" name="go" class="btn btn-primary">{{'COMMON.SEND' | translate}}</button>
+		</p>
+		
+    </form>
+ 
+    </div>

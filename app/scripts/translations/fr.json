@@ -1,0 +1,540 @@
+{
+    "APP_NAME": "Bibliotheque Altempo",
+
+    "COMMON": {
+        "ACTIONS": "Actions",
+		"VIEW": "VOIR",
+		"VIEW1": "Télécharger ?",
+		"VIEW2": "Consulter ?",
+		"VIEW3": "Regarder la vidéo ?",
+		"DESACTIVE": "Descativer",
+        "ADD": "Ajouter",
+        "SEND_MSG": "Envoyer un message",
+        "SEND_MSG_ALL": "Envoyer un message aux parents",
+        "BAD_FORMAT": "Le format de n'est pas correct",
+        "BACK": "Retour",
+        "CANCEL": "Annuler",
+        "CHOOSE_LANGUAGE":"Choisir la langue",
+        "CLEAR": "Effacer",
+        "CLOSE": "Fermer",
+        "CONFIRM": "Confirmer",
+        "DATE_FORMAT": "dd-MM-yyyy",
+        "DAY": "Jour",
+        "DAYS": {
+        	"MONDAY": "Lundi",
+        	"TUESDAY": "Mardi",
+        	"WEDNESDAY": "Mercredi",
+        	"THURSDAY": "Jeudi",
+        	"FRIDAY": "Vendredi",
+        	"SATURDAY": "Samedi",
+        	"SUNDAY": "Dimanche"
+        },
+        "EDIT": "Mettre à jour",
+        "FINISH": "Terminer",
+		"ADD_AUTHORIZED_PERSON": "Ajouter personne autorisées",
+        "GENERATE_NEW_PASSWORD": "Réinitialiser le mot de passe",
+        "HOME": "Accueil",
+        "LAST_CONNECTION_DATE": "Date de dernière connexion",
+        "LINK": "Lien",
+        "MANAGEMENT": "Gestion des données",
+        "MOVE_UP": "Monter",
+        "MOVE_DOWN": "Descendre",
+        "NEXT": "Etape suivante",
+        "NO": "Non",
+        "NUMBER_MAX": "Doit être inférieur à la valeur maximum",
+        "NUMBER_MIN": "Doit être supérieur à la valeur minimum",
+		"BAD_NUMBER" : "Le nombre doit être 1 au minimum",
+        "PREVIOUS": "Etape précédente",
+        "REMOVE":"Supprimer",
+        "REQUIRED": "Requis",
+        "SAVE": "Sauvegarder",
+        "SEE": "Voir",
+		"SEE_PARENT": "Voir les parents",
+		"SEE_CHILD" : "Consulter ses enfants",
+		"SEE_AUTHORIZED_PERSON": "Consulter ses personnes autorisées",
+        "SEND": "Envoyer",
+        "TODAY": "Aujourd'hui",
+        "VALIDATE": "Valider",
+        "WEEK": "Semaine",
+		"MESSAGES": "Messages",
+        "YES": "Oui"
+    },
+
+    "LANGUAGE": {
+        "EN": "Anglais",
+        "FR": "Français"
+    },
+	 "CATEGORIETOPRODUIT": {
+        "NAME": "Nom du produit",
+		"LIST": "Liste des produits associés",
+        "DESCRIPTION": "Description du produit",
+		"ACTIONS": "Actions"
+    },
+	
+	 "PRODUIT": {
+	   "CREATE" : "Création de la fiche produit",
+        "NAME": "Nom du produit",
+		"LIST": "Liste des produits",
+        "DESCRIPTION": "Description du produit",
+		"REFERENCE": "Référence du produit", 
+		"DATE_VERSION": "Derniére version le:",
+		"PICTURE": "Photo",
+		"VIDEO": "Vidéo de montage",
+		"SUPPORT":"Lien vidéo et image",
+		"NUMBER": "Numéro",
+		"PIECELIST": "Liste des piéces composant le produit",
+		"CODE": "Code du produit",
+		"CATEGORIE_PRODUIT": "Les catégories du produit",
+		"ACTIONS": "Actions",
+		"FILE": {
+			"CREATE": "Uploader un nouveau de document",
+            "TYPE": "Type de document", 
+			"NAME": "Nom du document",
+			"DOCUMENT": "Fichier",
+			"DATE": "Date",
+			"LIST": "Liste de documents liés au produit",
+			"VIEW": "Voir/Télecharger le document"
+        },
+	    "IMAGE": "Photo et image",
+		"PIECE": "Les pièces composant le produit"
+    },
+	"PIECE": {
+	    "CREATE" : "Création de la fiche piéce",
+		"EDIT" : "Mise à jour de la fiche piéce",
+        "NAME": "Nom de la piéce",
+		"IMAGE": "Image et photo",
+		"ITEM" : "Code et Nom de la piéce",
+		"LIST": "Liste des piéces",
+		"VIEW": "Informations sur la piéces",
+		"SUPPORT": "Image et vidéo",
+		"MAP": "PHOTO",
+        "DESCRIPTION": "Description de la piéce",
+		"REFERENCE": "Référence de la piéce", 
+		"DATE_VERSION": "Derniére version le:",
+		"PICTURE": "Photo",
+		"VIDEO": "Lien vidéo",
+		"NUMBER": "Numéro",
+		"INFORMATION": "Information liées à la piéce",
+		"CODE": "Code de la piéce",
+		"NAMEFOURNISSEUR": "Nom du fournisseur",
+		"DETAILFOURNISSEUR": "Détail du fournisseur",
+		"REFERENCEFOURNISSEUR": "Réference du fournisseur",
+		"PRIXFOURNISSEUR": "Prix du fournisseur",
+		"CATEGORIE_PRODUIT": "Les catégories du produit",
+		"ACTIONS": "Actions",
+		"FILE": {
+			"CREATE": "Uploader un nouveau de document",
+            "TYPE": "Type de document", 
+			"NAME": "Nom du document",
+			"DOCUMENT": "Fichier",
+			"DATE": "Date",
+			"LIST": "Liste de documents liés à la piéce",
+			"VIEW": "Voir/Télecharger le document"
+        },
+	    "VIDEO": "Voir la vidéo",
+		"PIECE": "Les pièces composant le produit"
+    },
+	 "OBJET": {
+	   "CREATE" : "Création de l'objet",
+        "NAME": "Nom de l'objet",
+		"LIST": "Liste des objets",
+        "DESCRIPTION": "Description du produit",
+		"REFERENCE": "Référence du produit", 
+		"DATE_VERSION": "Derniére version le:",
+		"PICTURE": "Photo",
+		"VIDEO": "Lien vidéo",
+		"NUMBER": "Numéro",
+		"CODE": "Code de l'objet",
+		"CATEGORIE_PRODUIT": "Les catégories du produit",
+		"ACTIONS": "Actions",
+		"EDIT": "Mise à jour de l'objet",
+		"FILE": {
+            "TYPE": "Type de document", 
+			"NAME": "Nom du document"
+        },
+	    "VIDEO": "Voir la vidéo",
+		"PIECE": "Les pièces composant le produit"
+    },
+	 "FAMILLE": {
+	   "CREATE" : "Création de la famille",
+        "NAME": "Nom de la famille",
+		"LIST": "Liste des familles",
+        "DESCRIPTION": "Description du produit",
+		"CODENUMBER": "Code de la famille", 
+		"OBJET": "Objet de la famille",
+		"TRIGRAMMECODE": "Trigramme associé",
+		"VIDEO": "Lien vidéo",
+		"NUMBER": "Numéro",
+		"CODE": "Code de l'objet",
+		"CATEGORIE_PRODUIT": "Les catégories du produit",
+		"ACTIONS": "Actions",
+		"EDIT": "Mise à jour d'une famille",
+		"FILE": {
+            "TYPE": "Type de document", 
+			"NAME": "Nom du document"
+        },
+	    "VIDEO": "Voir la vidéo",
+		"PIECE": "Les pièces composant le produit"
+    },
+	"CATEGORIE": {
+        "NAME": "Nom de la catégorie",
+		"LIST": "Liste des catégories",
+		"CREATE": "Création d'une nouvelle catégorie",
+		"DESCRIPTION": "Description de la catégorie"
+    },
+    "MESSAGE": {
+        "CONFIRMATION": {
+            "TITLE": "Action nécessitant une confirmation", 
+			"REMOVE": "Êtes vous sûr de vouloir supprimer ce message ?"
+        },
+        "ERROR": {
+            "ACCESS_FORBIDDEN": "Accès non autorisé.",
+            "ALREADY_EXISTS": "Cet objet ne peut être créé car il existe déjà.",
+            "PERSON_ALREADY_EXISTS": "Cette personne semble  déjà référencé. Verifiez le numéro de téléphone",
+            "BAD_CREDENTIALS": "Votre adresse mail ou votre mot de passe est invalide.",
+            "BOOKING_ISSUE_EXIST_ON_UNAVAILABLE_SLOT": "Une demande de réservation est déjà présente sur ce créneau d'indisponibilité.",
+            "CHK_DELIVERY_ISSUE_IS_CURRENTLY_PRESENT": "Une réservation existe déjà sur le créneau demandé.",
+            "CHK_UNABLE_TO_BOOK_WHEN_HANDOVER_IS_TRUE": "Une demande de livraison existe déjà sur le créneau demandé.",
+            "CHK_UNAVAILABLE_SLOT_EXIST_FOR_ISSUE": "La crèche est fermé sur certaines périodes du créneau demandé.",
+            "CONNECTION_REFUSED": "Impossible de contacter le serveur. Vérifiez votre connexion à Internet.",
+            "INTERNAL_SERVER_ERROR": "Une erreur inattendue s'est produite.<br/>Veuillez contacter le support pour plus d'informations.",
+            "INVALID_DURATION": "Une durée horaire de cette demande est invalide (HH:MM par tranche de 30 minutes(ex 10:00, 15:30).",
+            "INVALID_TIME_IN_START_DATE": "L'horaire de cette demande est invalide (HH:MM par tranche de 30 minutes(ex 10:00, 15:30).",
+            "ISSUE_OUT_OF_BOOKING_DATE_RANGE": "Cette demande est en dehors de la période d'ouverture de la crèche.",
+            "START_DATE_GREATER_THAN_END_DATE": "Date de début supérieure à date de fin.",
+            "TITLE": "Erreur",
+            "TODAY_GREATER_THAN_START_DATE_UPDATE_NOT_ALLOWED": "Date de début de demande trop ancienne. Ajout ou modification non autorisée.",
+            "UNACCEPTABLE": "Cette action ne peut être réalisée car cet élément est utilisé.",
+            "CHILD_TOO_YOUNG": "L'enfant ne peut être admis au dela de 6 ans.",
+            "PERSON_TOO_YOUNG": "La personne ne peut être admis qu'à partir de 18 ans.",
+            "UNACCEPTABLE": "Cette action ne peut être réalisée car cet élément est utilisé.",
+            "NUMBER_PLACES_ATTEINT_DANS_CRENEAU": "Il n'y a plus de place disponible dans ce creneau.",
+            "ENFANT_DEJA_PRESENT_DANS_CE_CRENEAU": "Cette enfant est déjà présent dans ce creneau.",
+			"MIS_A_JOUR_NON_PERMIS_DATE_DE_JOUR_DEPASSE_DATE_DE_DEMARAGE": "La création de la demande n'est pas permise, la date de début est antérieur de l'heur actuél  ",
+			"NO_CRENEAU_ON_CURRENT_RESA_DATE_RANGE": "La durée souhaitée dépasse la durée du créneau disponible.",
+			"L'UTILISATEUR_N'EST_PAS_ADMINCRECHE": "L'utilisateur n'est pas un gestionnaire de crèche",
+			"VOUS_N'AVEZ_PAS_LE_DROIT": "Vous ne disposez pas des droits pour effectuer la mise à jour des parents",
+			"ADMIN_CRECHE_IS_ALREADY_MANAGER" : "Administrateur Crèche déjà affecté a une crèche",
+			"VOUS_N'AVEZ_ACCES_JUSQU'A_LA_CREATION_DE_TOUS_LES_GESTIONNAIRES": "Vous n'avez pas le droit",
+			"BAD_MAIL": "Cette adresse mail n'existe pas",
+			"VOUS_NE_DISPOSEZ_PAS_DES_DROITS_POUR_ACCCEDER_A_CETTE_PAGE" : "Vous n'avez pas les droits pour acceder à cette page"
+			
+        },
+        "GENERAL":{
+    		"CONTENT": "Message",
+    		"FIRST_NAME": "Prénom",
+    		"FULL_NAME": "Nom complet",
+    		"LAST_NAME": "Nom",
+    		"MAIL": "Email",
+    		"CRECHE": "Crèche",
+    		"SUBJECT": "Sujet",
+    		"TELEPHONE_NUMBER": "Numéro de téléphone",
+    		"TITLE": "Messages",
+    		"TITLE_POPUP": "Message",
+			"ADMIN_CRECHE": "Administrateur de crèche",
+			"PARENT": "Parent"
+			
+
+        },
+        "INFO":{
+        	"TITLE": "Information"
+        },
+        "MENU": "Messages",
+        "SUCCESS": {
+            "CREATE": "L'élément a été créé avec succès.",
+            "EDIT": "L'élément a été mis à jour.",
+            "PARENT": "Felicitations vous étes inscrit dans l'application Opti'tempo, un mail vous a été envoyé.",
+			"CRECHE_ADMINISTRATOR": "Le message a bien été envoyé.",
+			"REGISTRATION": "Votre inscription a été bien prise en compte, un mail contenant votre login et mot de passe vous y est envoyé.",
+			"REMONTE": "Votre demande est bien prise en compte, merci !",
+			"MDP": "Votre mot de passe a été regénéré avec succès",
+            "REMOVE": "L'élément a bien été supprimé."
+        }
+    },
+    "REGISTRATION":{
+    	"LINK": "Première connexion ?  Cliquez ici pour vous inscrire",
+		"LINK1": "Mot de passe oublié?",
+		"LINK2": "Optitempo vous intéresse ? Optez pour la crèche de votre choix en cliquant ici",
+    	"TITLE": "Liste des crèches",
+		"CRECHES": "Crèches",
+		"CRECHE": "Crèche",
+		"DEPARTEMENT": "Département",
+		"VILLE": "Ville"
+    },
+	"USERTYPE":{
+	"TYPE":{
+			"TITLE" : "Vous êtes ?",
+			"PARTICULAR": "Parent",
+			"MANAGER" : "Gestionnaire"
+	}
+	},
+    "NOTIFICATION":{
+    	"MESSAGES":{
+        "ALERT_NOUVELLE_RESERVATION": "Une réservation vient d'être faite  par le parent <strong>{{parentName}}</strong>",
+        "ALERT_NOUVEAU_CRENEAU": "Un créneau vient d'être mis à disposition pour le <strong>{{bookingIssueStartDate}}</strong> ",
+        "ALERT_BOOKING_ISSUE_TRUCK": "Le parent <strong>{{parentName}}</strong> doit arriver à <strong>{{endDateBookingIssue}}</strong>",
+	     	"ALERT_END_NURSEY": "La crèche <strong>{{crecheName}}</strong> se termine le <strong>{{crecheEndDate}}</strong>",
+	    	"ALERT_NEW_MESSAGE_TO_ADMIN": "Un parent <strong>{{Parent}}</strong> vous a envoyé un message",
+            "ALERT_NEW_MESSAGE": "vous avez reçu un message",
+			"ALERTE_RESERVATION_SUPPRIMEE": "Votre résérvation de <strong>{{bookingIssueStartDate}}</strong> viens d'etre supprimée",
+			"ALERT_NEW_MESSAGETO_PARENT": "Le gestionnaire <strong>{{adminCrecheName}}</strong>de la crèche <strong>{{crechName}}</strong> vous a envoyé un message",
+	      	"DELIVERY_ALERT_NEW_BOOKING": "Le parent <strong>{{parentName}}</strong> a créé/modifié une resérvation pour la crèche <strong>{{crecheName}}</strong>"
+
+    	},
+    	"BUTTON_REMOVE_ALL": "Supprimer tous",
+    	"BUTTON_READ": "Lu",
+    	"BUTTON_READ_ALL": "Lire tous"
+    },
+    "SIGN_IN": {
+        "PASSWORD": "Votre mot de passe",
+        "PROCESS": "Se connecter",
+        "TITLE": "Accès protégé",
+        "USERNAME": "Votre identifiant",
+		"ADRESSE": "Adresse mail",
+		"NEW_PASSWORD": "Nouveau mot de passe",
+		"MDP": "Adresse mail",
+		"CONFIRME_PASSWORD": "Confirmer mot de passe"
+    },
+    "SIGN_OUT": {
+        "PROCESS": "Se déconnecter"
+    },
+	  "DEPARTEMENT": {
+        "DEPARTEMENT": "Département"
+	
+    },
+	  "VILLE": {
+        "VILLE": "Ville"
+    },
+    "CRECHE": {
+    	"ALERT": "Alertes de la crèche : {{crecheName}}",
+    	"CREATE": "Création d'une crèche",
+        "EDIT": "Mise à jour de la crèche",
+		"REGISTRATION": "S'inscrire ?  ",
+		"MANAGE_INFORMATION": "Documentations liées au produit",
+		"MANAGE_REMONTE": "Liste de peronnes demandeurs",
+		"CONSULTATION" : "Consulter",
+		"INFORMATION": "Information",
+		"INFORMATION1": "Votre crèche <strong>{{crecheName}}</strong> n'adhère pas encore à l'application...",
+		"DEPARTEMENT": "Département",
+		"VILLE": "Ville",
+    	"GENERAL": {
+    		"ADDRESS": "Adresse",
+			"NUMBER": "Numéro",
+			"COLLECTIVITE": "Collectivités",
+			"NAME": "Nom",
+			"DATE_END": "Date de fin (veuillez utiliser le calendrier)",
+	    	"DATE_START": "Date de début (veuillez utiliser le calendrier)",
+			"DATE_END1": "Date de fin",
+	    	"DATE_START1": "Date de début",
+			"VILLE": "Ville",
+			"CODEPOSTAL": "Code Postal",
+            "ALERT": {
+                "DATETIME": "Date Res.",
+                "PARENT": "Parent",
+                "LATE_ARRIVAL": "Le parent n'est pas arrivé à l'heure (Retard : {{delay}}h).",
+                "MESSAGE": "Message"
+            },
+			"PRICE": "Tarif horaire",
+	    	"EDIT_TITLE": "Modification d'une crèche",
+	    	"TELEPHONE_NUMBER": "Numéro télephone",
+	    	"OPENING_TIME": "Horaire d'ouverture",
+	    	"CLOSING_DAYS": "Jours de fermeture",
+			"SYSTEME" : "Systéme de la crèche",
+	    	"SYSTEME_PSUCOLECTIVITE": "PSUCOLLECTIVITE",
+			"SYSTEME_PSUMICROCRECHE": "PSUMICROCRECHE",
+			"SYSTEME_PAJE": "PAJE",
+            "INFORMATION": {
+                "ACCEPT_TERMS_AND_CONDITIONS": "J'accepte les conditions et j'approuve mon engagement",
+                "DESCRIPTION": "Informations sur la crèche",
+                "MAP": "Image de la crèche (Max: 01 mg)",
+                "VIDEO": "Vidéo de présentation"
+            },
+	    	"ADMIN_CRECHE": "AdminCreche",
+			"SUPERUSER": "Superviseur"
+
+    	},
+        "INFORMATION": "Informations liées à la crèche : {{crecheName}}",
+    	"LIST": "Gestion des crèches",
+        "MENU": "Crèches",
+		"MENU1": "Ma crèche",
+		"MENU2": "Mes crèches",
+		"ACTIONS": "Actions",
+    	"REMOVE": {
+            "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir supprimer la crèche <strong>{{crecheName}}</strong> ?"
+        },
+        "BOOKINGS": "Réservations"
+    },
+
+    "USER": {
+	 "REMOVE": {
+          "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir supprimer l'utilisateur <strong>{{userName}}</strong> ?"
+      },
+	   "REMONTE": {
+            "MAIL": "Adresse mail",
+            "TELEPHONE_NUMBER": "Numéro de téléphone",
+            "TYPE": "Type utilisateur",
+			"LIST": "Liste des personnes demandeurs",
+			"EXPORT": "Exporter la liste en fichier CSV",
+			"EXPORT2": "Exporter la liste de tous les gestionnaires en fichier CSV"
+        },
+        "CREATE": {
+            "COMMERCIAL": "Création d'un utilisateur commercial",
+            "ADMINISTRATEUR": "Création d'un utilisateur administrateur",
+            "AID_COMMERCIAL": "Création d'un utilisateur aide commercial",
+			"AID_BE": "Création d'un utilisateur aide bureaux d'études",
+			"AID_CHARGE_AFFAIRE": "Création d'un utilisateur aide chargé d'affaire",
+			"CHARGE_AFFAIRE": "Création d'un utilisateur chargé d'affaire",
+			"BE": "Création d'un utilisateur bureaux d'études",
+			"CONDUCTEUR_TRAVAUX": "Création d'un utilisateur conducteur travaux"
+        },
+        "EDIT": {
+            "ADMINCRECHE": "Mise à jour d'un administrateur de crèche",
+            "CHILD": "Mise à jour d'un enfant",
+			      "PARENT": "Mise à jour d'un parent",
+			"SUPERUSER":"Mise à jour d'un profil sueperviseur",
+			"COLLECTIVITE":"Mise à jour d'un profil collectivité",
+            "AUTHORIZED_PERSON": "Mise à jour d'une personne autorisée"
+        },
+        "GENERALE": {
+            "FIRST_NAME":"Nom",
+            "FULL_NAME": "Nom complet",
+            "LAST_NAME": "Prénom",
+            "MAIL": "Adresse électronique",
+            "TELEPHONE_NUMBER": "Numéro de téléphone",
+            "MOBILE_NUMBER": "Numéro mobile",
+			"MDP": "Nouveau mot de passe",
+			"MDP_CHANGE": "Modifier votre mot de passe ?",
+			"BIRTH_DAY": "Date de naissance (veuillez utiliser le calendrier)",
+			"BIRTH_DAY1": "Date de naissance"
+        },
+        "GENERATE_NEW_PASSWORD": {
+            "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir réinitialiser le mot de passe de l'utilisateur <strong>{{userName}}</strong> ?"
+        },
+        "LIST": {
+            "COMMERCIAL": "Gestion des Utilisateurs",
+            "CHILD": "Gestion des enfants",
+            "PARENT": "Gestion des parents",
+            "AUTHORIZED_PERSON": "Gestion des personnes autorisées"
+        },
+        "MENU": {
+            "ADMINCRECHE": "AdminCreches",
+            "PARENT": "Parents",
+            "ACCOUNT": "Mon compte",
+			"COLLECTIVITE":"Collectivités",
+			"SUPERUSER": "Superviseurs"
+        },
+		"PARENT":{
+			"COMPTE":"Mon compte",
+			"CIVILITY": "Civilité",
+			"ACTIVED": "Utilisateur activé",
+			"CIVILITY_GENTLEMAN": "Monsieur",
+			"CIVILITY_MADAM": "Madame",
+			"ADDRESS": "Adresse",
+			"RECIPIENT_NUMBER": "Numéro allocataire CAF",
+			"MANY_CHILD_CARE": "Nombre d'enfants à charge",
+			"ANNUAL_TAXABLE_REVENUE": "Revenu fiscal de réfèrence du foyer",
+			"ALLOW_PHOTOGRAPHY": "Autorisez-vous la photographie de votre enfant ?",
+			"PRICE": "Le tarif d'horaire",
+			"CRECHE" : "Crèche",
+			"TITLE_POPUP": "Parent",
+			"ENABLED": "Activer ?",
+			"LISTNER": "Etre informé de tous les créneaux disponibles par mail ?",
+			"SIMULATE_TARIFF": "Simuler le tarif horaire",
+			"CREATE": "Création d'un parent",
+			"EDIT":"Mis à jour d'un parent",
+      "REMOVE": {
+          "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir supprimer l'utilisateur <strong>{{userName}}</strong> ?"
+      },
+      "GENERATE_NEW_PASSWORD": {
+          "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir réinitialiser le mot de passe de l'utilisateur <strong>{{userName}}</strong> ?"
+      }
+
+		}
+
+
+    },
+	"CHILD": {
+		"LIST": "Liste d'enfants",
+		"LIST1": "Mes enfants",
+		"FIRST_NAME": "Nom ",
+		"LAST_NAME" : "Prénom",
+		"SEXE":"Sexe ",
+		"SEXE_FEMALE": "Fille",
+		"SEXE_MALE": "Garçon",
+		"BIRTH_DAY": "Date de naissance",
+		"BIRTH_DAY1": "Date de naissance",
+		"WALKING" : "L'enfant marche ?",
+		"ALLERGY" : "Allergie(s)",
+		"DIET" : "Régime alimentaire",
+		"PICTURE" : "Photo (01 Méga au maximum)",
+		"PICTURE1" : "Photo",
+		"PARENT": "Parent",
+		"TITLE_POPUP": "Enfant",
+		"CREATE": "Création d'un enfant",
+		"EDIT":"Mis à jour d'un enfant",
+		"FULL_NAME":"Nom complet",
+		"ONGOING_TREATMENT": "Traitement médicale en cours",
+    "YES":"Oui",
+    "NO":"Non",
+    "REMOVE":{
+      "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir retirer l'enfant {{enfantName}}  ?"
+
+    }
+
+	},
+	"Type": {
+	"TypeDemande":"RESERVATION",
+	"TypeDemande":"CRENEAUDISPO"
+	},
+	
+   "ACCEUIL":{
+     "TITLE": "Bienvenue sur l’application Opti'tempo !",
+	 "METTRE": "Mettre en ligne des créneaux horaires habituellement peu fréquentés, ou exceptionnellement vacants est possible avec Opti’tempo",
+	 "VOTRE": "Votre crèche est créée, vous pouvez maintenant :",
+	 "SAISIR": " Saisir les horaires disponibles",
+	 "ET": "Et rencontrer prochainement les parents intéressés par cette garde occasionnelle",
+	 "POUR": "Pour plus d'informations sur l'utilisation de l'application veuillez cliquer",
+	 "OPTI": "Opti’tempo vous permettra de consulter les créneaux occasionnels proposés par votre crèche et d'en réserver une place pour votre enfant",
+	 "VOUS": "Vous êtes inscrit, vous pouvez maintenant :",
+	 "ENREG": "Enregistrer vos enfants et les personnes autorisées à retier vos enfants de la crèche",
+	 "CONSULT": "Consulter les horaires disponibles sur le planning, une notification vous préviendra quand un créneau vient d'être mis à disposition",
+	 "RESERV": "Réserver une place pour votre enfant avec la durée souhaitée",
+	 "COMM": "Communiquer avec le gestionnaire de votre crèche via l'onglet Message",
+	 "POURPLUS": "Pour plus d'informations sur l'utilisation de l'application veuillez cliquer",
+	 "ATTENTION": "ATTENTION",
+	 "UNCRN": "Un créneau réservé est un créneau dû, la durée de la réservation est modifiable par contre sa suppression nécessitera de contacter le gestionnaire du crèche",
+	 "PRODUIT_NULL" : "Aucun produit n'est crée!",
+	 "RECHERCHE":"Recherche par nom de catégorie",
+	 "RECHERCHE_2":"Recherche par nom de crèche:",
+	 "AUCUN_ENFANT":"Aucun enfant n'est inscrit pour le parent :",
+	 "RECHERCHE_3":"Recherche par nom:",
+	 "AUCUNE_PERSONNE":"Aucune personne est renseignée pour l'enfant :",
+	 "AUCUN_PARENT":"Aucun parent n'est inscrit dans la crèche:",
+	 "AUCUN_REMONTE":"Liste vide, aucune personne n'a remonté la demande pour la créche: ",
+	 "AUCUN_GESTIONNAIRE":"Désolé, aucun gestionnaire n'est affecté à cette crèche !",
+	 "INSCRIPTION": "Félicitations ! nous avons bien pris en compte votre demande, un mail vous est envoyé afin de poursuivre la démarche de votre inscription. Merci !",
+	 "VIEW_PARENT1":"Recommandez Optitempo à votre crèche en nous laissant vos coordonnées.",
+	 "VIEW_PARENT2":"Nous contacterons son gestionnaire pour l'informer de votre envie de réserver des heures en ligne.",
+	 "VIEW_GESTIONNAIRE":"Laissez-nous vos coordonnées, nous vous contacterons prochainement pour tester l'application",
+	 "REMONTE": "Nous vous remercions pour votre confiance !", 
+	 "FORGET": "Votre mot de passe a été regénèré et envoyé à votre adresse mail. Merci !"
+   },
+	"PERSON":{
+		"TITLE": "Personne autorisée",
+		"LIST": "Liste des personnes autorisées",
+		"FIRST_NAME": "Nom",
+		"LAST_NAME" : "Prénom",
+		"CIVILITY": "Civilité",
+		"CIVILITY_GENTLEMAN": "Monsieur",
+		"CIVILITY_MADAM": "Madame",
+		"BIRTH_DAY": "Date de naissance",
+		"ADDRESS" : "Adresse",
+		"TITLE_POPUP": "Personne autorisée",
+		"AUTHORIZED": "Autorisée ?",
+    "TELEPHONE_NUMBER": "Numéro de téléphone",
+    "REMOVE":{
+      "CONFIRMATION_MESSAGE": "Êtes vous sûr de vouloir retirer {{personName}} des personnes des autorisées  ?"
+
+    }
+	}
+}

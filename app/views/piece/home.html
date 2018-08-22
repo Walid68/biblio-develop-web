@@ -1,0 +1,92 @@
+<div class="container1">
+    <h2>{{'PIECE.LIST' | translate}}</h2>
+
+ 
+
+<div class="actions">
+        <p class="text-right">
+			
+             <p class="text-right">
+			 			 
+            <a ng-href="#!/piece/create" ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> {{'COMMON.ADD' | translate}}
+            </a>
+			<a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"  ng-href="#!/piece/home" class="btn btn-primary">
+              <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+		
+    </div>
+	
+
+    <div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+	<!-- <label ng-show="searchResult.totalElements > 0 && hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">{{'ACCEUIL.RECHERCHE' | translate}} <input ng-model="piece.namePiece" class="form-control"></label> -->
+	
+	 
+	    <table class="table table-striped text-center">
+	    <thead>
+	        <tr ng-if="searchResult.totalElements > 0">
+				
+	            <th class="col-md-3 text-center">{{'PIECE.ITEM' | translate}}</th>
+				<th class="col-md-3 text-center">{{'PIECE.DESCRIPTION' | translate}}</th>
+				<th class="col-md-3 text-center">{{'PRODUIT.PHOTO' | translate}}</th>
+				<th class="col-md-3 text-center">{{'PIECE.ACTIONS' | translate}}</th>
+	        </tr>
+	    </thead>
+	    <tr ng-repeat="piece in searchResult.content | filter: piece ">
+			
+	        <td>{{piece.referenceString+ ' ' +piece.name | uppercase }}</td>
+			<td>{{piece.description}}</td>
+			<td><a href="" ng-click="openLightboxModal(apiUrl + '/piece/' + piece.id + '/information/imageData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/piece/{{piece.id}}/information/imageData" style="max-width: 80px; max-height: 45px">
+			</p>
+					
+            	</a>
+            </td>  
+			
+	           <td>
+	            <div class="btn-group">
+	                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                    {{'COMMON.ACTIONS' | translate}}
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+
+                        <li role="separator" class="divider"></li>
+												
+					    <li>
+	                        <a href="#!/piece/edit/{{piece.id}}" >
+                            <p  ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"><span class="glyphicon glyphicon-edit"></span> {{'COMMON.EDIT' | translate}}</p>
+
+                        	</a>
+	                    </li>
+						
+						<li>
+                            <a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" href="#!/piece/{{piece.id}}/information/view" >
+                            	<span class="glyphicon glyphicon-info-sign"></span> {{'PIECE.VIEW' | translate}}
+                           	</a>
+                        </li>
+						<li>
+                            <a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" href="#!/piece/{{piece.id}}/documentation/home" >
+                            	<span class="glyphicon glyphicon-info-sign"></span> {{'CRECHE.MANAGE_INFORMATION' | translate}}
+                           	</a>
+                        </li>
+						<li>
+                            <a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" href="#!/piece/{{piece.id}}/information/manage" >
+                            	<span class="glyphicon glyphicon-info-sign"></span> {{'PIECE.SUPPORT' | translate}}
+                           	</a>
+                        </li>
+	                    <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+	                        <a href="" ng-click="remove(piece)" >
+	                        	<span class="glyphicon glyphicon-trash"></span> {{'COMMON.REMOVE' | translate}}
+                        	</a>
+	                    </li>
+							
+	                </ul>
+	            </div>
+	        </td>
+	    </tr>
+	</table>
+</div>

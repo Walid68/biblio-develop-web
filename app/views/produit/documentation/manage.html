@@ -1,0 +1,41 @@
+<div class = "container1">
+<h2 class="text-center">{{'PRODUIT.FILE.' + operationMode | translate}}</h2>
+
+<form name="manageProduitFileForm" ng-submit="save(manageProduitFileForm.$valid)">
+
+	 <div class="form-group">
+	 <label for="fileType">{{'PRODUIT.FILE.TYPE' | translate}}</label>
+	<select id="monselect" name="fileType" class="form-control" ng-model="managedFile.type" maxlength="128" required autofocus>
+	  <option value="Fiche produit client">Fiche produit client</option> 
+	  <option value="Budget et sous détail de prix">Budget et sous détail de prix</option>
+	  <option value="Nomenclature pièce">Nomenclature pièce</option>
+	  <option value="Plan de fabrication">Plan de fabrication</option>
+	  <option value="Plan de montage">Plan de montage</option>
+	  <option value="Document de conditionnement">Document de conditionnement</option>
+	  <option value="Document DWG pour BE">Document DWG pour BE</option>
+	  <option value="Tableau de liste de pièce">Tableau de liste de pièce</option>
+	</select>
+	</div>
+    <div class="form-group">
+        <label for="fileName">{{'PRODUIT.FILE.NAME' | translate}}</label>
+        <input type="text" name="fileName" class="form-control" ng-model="managedFile.name" maxlength="128" required autofocus/>
+        <div ng-messages="manageProduitFileForm.fileName.$error">
+            <div ng-messages-include="views/shared/messages.html"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="fileTemp">{{'PRODUIT.FILE.DOCUMENT' | translate}}</label>
+        <input type="file" name="fileTemp" ng-model="fileTemp" ng-required="operationMode === 'CREATE'" class="form-control" base-sixty-four-input />
+        <!-- Preview
+        <a href="" ng-click="openLightboxModal(apiUrl + '/company/' + company.id + '/employee/' + managedEmployee.id + '/identitydocument')">
+            <img style="margin: 10px 0 0 0; max-width:200px;" data-ng-src="data:image/png;base64,{{identityDocumentTemp.base64}}" />
+        </a> -->
+    </div>
+
+    <p class="text-center">
+        <button type="submit" class="btn btn-success text-center"><span class="glyphicon glyphicon-save"></span> {{'COMMON.SAVE' | translate}}</button>
+        <button type="button" class="btn btn-default" ng-click="goBack()"><span class="glyphicon glyphicon-remove"></span> {{'COMMON.CANCEL' | translate}}</button>
+    </p>
+</form>
+</div>

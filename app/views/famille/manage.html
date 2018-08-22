@@ -1,0 +1,61 @@
+<div class= "container1">
+
+    <h2 class="text-center">{{'FAMILLE.' + operationMode | translate}}</h2>
+
+
+    <div class="actions">
+        <p class="text-right">
+            <a class="btn btn-primary" href="#!/famille/home">
+                <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+    </div>
+
+
+	<form name="manageFamilleForm" ng-submit="save(manageFamilleForm.$valid)">
+		<div class="form-group">
+			<label for="name">{{'FAMILLE.NAME' | translate}} </label>
+			<input type="text" name="name" class="form-control" ng-model="managedFamille.name" maxlength="40" required autofocus/>
+			<div ng-messages="manageFamilleForm.name.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div>
+		
+	
+	<div class="form-group">
+			<label for="trigrammeCode">{{'FAMILLE.TRIGRAMMECODE' | translate}}</label>
+			<select class="form-control"
+					name="trigrammeCode"
+					
+                    data-ng-model="managedFamille.trigrammeCode.id"
+                    data-ng-options='trigrammeCode.id as trigrammeCode.code for trigrammeCode in trigrammeCodes.content'>
+            </select>
+            <div ng-messages="manageFamilleForm.trigrammeCode.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div> 
+	  <div class="form-group">
+			<label for="number">{{'FAMILLE.NUMBER' | translate}}</label>
+			<input type="text" name="number" class="form-control" ng-model="managedFamille.number" maxlength="2" required autofocus placeholder="XX"/>
+			<div ng-messages="manageFamilleForm.number.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div>
+
+		<div class="form-group">
+			<label for="name">{{'FAMILLE.DESCRIPTION' | translate}} </label>
+			<input type="text" name="name" class="form-control" ng-model="managedFamille.description"  />
+			<div ng-messages="manageFamilleForm.description.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div>
+		
+		
+
+		<p class="text-center"  >
+            <button type="submit" class="btn btn-success text-center"><span class="glyphicon glyphicon-save"></span> {{'COMMON.SAVE' | translate}}</button>
+            <button type="button" class="btn btn-danger" ng-click="goBack()"><span class="glyphicon glyphicon-remove"></span> {{'COMMON.CANCEL' | translate}}</button>
+        </p>
+	</form>
+
+</div>

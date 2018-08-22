@@ -1,0 +1,59 @@
+{
+  "name": "biblio-web",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-cookies": "^1.6.8",
+    "angular-messages": "^1.6.8",
+    "angular-resource": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "angular-sanitize": "1.6.8",
+    "underscore": "~1.8.2",
+    "fontawesome": "~4.3.0",
+    "bootstrap-sass-official": "~3.3.4",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-static-files": "^2.17.0",
+    "bootbox": "~4.4.0",
+    "angular-base64": "~2.0.5",
+    "angular-bootstrap": "0.13.1",
+    "angular-loading-bar": "~0.8.0",
+    "ngtoast": "~1.5.4",
+    "ng-utilities": "~1.0.3",
+    "angular-i18n": "~1.4.3",
+    "sockjs": "~0.3.4",
+    "stomp-websocket": "~2.3.4",
+    "angular-ui-calendar": "~1.0.1",
+    "angular-sockjs": "~0.1.0",
+    "angular-base64-upload": "~0.1.19",
+    "angular-bootstrap-lightbox": "~0.6.1",
+    "angular-chart.js": "~0.7.6",
+    "angular-translate-storage-local": "~2.7.2",
+    "angular-ui-select": "^0.19.7",
+    "ng-country-select": "^0.1.4",
+    "downloadjs": "^1.4.7",
+    "angular-auto-complete": "^1.7.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.6.8"
+  },
+  "overrides": {
+    "bootstrap-sass-official": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/javascripts/bootstrap.js",
+        "assets/fonts/**/*"
+      ]
+    },
+    "angular-i18n": {
+      "main": [
+        "angular-locale_fr-fr.js"
+      ]
+    }
+  },
+  "appPath": "app",
+  "resolutions": {
+    "moment": "~2.10.0",
+    "angular": ">=1.6.8"
+  }
+}

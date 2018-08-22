@@ -1,0 +1,44 @@
+<h2 translate="SITE.INFORMATION" class="text-center" translate-values="{siteName: site.name}"></h2>
+
+<h3>1. {{'SITE.GENERAL.INFORMATION.MAP' | translate}}</h3>
+<p style="text-align:center;">
+    <img ng-src="{{apiUrl}}/produit/{{produit.id}}/picture" style="max-width: 400px; max-height: 250px">
+</p>
+
+
+<div class="clearfix"></div>
+<br/>
+
+<div class="clearfix"></div>
+<br/>
+<h3>3. {{'SITE.GENERAL.INFORMATION.VIDEO' | translate}}</h3>
+<p style="text-align:center;">
+    <iframe width="640" height="390" ng-src="{{getVideoLink()}}" frameborder="0" allowfullscreen></iframe>
+</p>
+<br/><br/>
+
+<form name="acceptSiteTermsAndConditionsForm" ng-submit="save(acceptSiteTermsAndConditionsForm.$valid)" ng-if="!hasAnyRole('ADMINISTRATOR', 'SUPER_ADMINISTRATOR', 'LOGISTICIAN', 'SPS_COORDINATOR', 'REFERENT')">
+
+    <p style="text-align:center; font-weight: bold; font-size: 16px;">
+        <input type="checkbox" name="acceptTermsAndConditions" ng-model="acceptTermsAndConditions" required> {{'SITE.GENERAL.INFORMATION.ACCEPT_TERMS_AND_CONDITIONS' | translate}}
+    </p>
+
+    <div ng-repeat="checkbox in checkboxes">
+        <p style="text-align:center; font-weight: bold; font-size: 16px;">
+            <input type="checkbox" name="checkbox-{{ checkbox.id }}" ng-model="checkbox.checked" required> {{ checkbox.description }}
+            <div ng-messages="acceptSiteTermsAndConditionsForm.checkboxes.$error" style="text-align:center;">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+        </p>
+    </div>
+
+    <p style="text-align:center;">
+        <button type="submit" class="btn btn-primary">{{'COMMON.SAVE' | translate}}</button>
+    </p>
+</form>
+
+<p class="text-center" ng-if="hasAnyRole('SPS_COORDINATOR', 'REFERENT')">
+    <button type="button" class="btn btn-default" ng-click="goBack()">
+        <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+    </button>
+</p>

@@ -1,0 +1,11 @@
+development:
+                         availableLanguages: ['fr','en']
+                         bookingBroadcast: 'bookingBroadcast'
+                         notificationBroadcast: 'notificationBroadcast'
+                         apiUrl: 'http://localhost:8585/biblio-api-restapi/rs'
+ 
+# production:
+                       # apiUrl: '/api/rs'
+                       # availableLanguages: ['fr','en']
+                       # bookingBroadcast: 'bookingBroadcast'
+                       # notificationBroadcast: 'notificationBroadcast'

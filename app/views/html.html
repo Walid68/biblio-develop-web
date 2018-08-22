@@ -1,0 +1,20 @@
+<body ng-app="biblioWebApp">
+    <div ng-controller="MainCtrl as ctrl">
+        <input type="text"
+            ng-model="ctrl.colorName"
+            style="width: 400px;"
+            placeholder="Hex Color Code. Try 'a' or '0'"
+            auto-complete="ctrl.autoCompleteOptions" />
+    </div>
+</body>
+
+<!-- Contents of templates/color-list-item.tpl.html -->
+<table class='auto-complete'>
+    <tbody>
+        <tr>
+            <td style='width: 30%;' ng-bind-html="entry.item.code | highlight:entry.searchText"></td>
+            <td style='width: 10%; background-color:{{entry.item.code}}'></td>
+            <td style='width: 60%; padding-left: 10px' ng-bind-html="entry.item.name"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,109 @@
+<div class="row" >
+
+    <br>
+	
+ 	  <div>
+      <div class="navbar navbar-inverse" >
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+		<table class="table table-striped text-center">
+		<thead>
+			 <tr>
+			 <td ng-repeat="row in searchResult.content | filter: row" class="col-md-2 text-center">
+	        
+			 <div class="brick-logo">
+                <img src="images/cat1.jpg" style="width: 30px; height: auto;">
+             </div>
+             <a href="#!/categorieToProduit/{{row.id}}/concerned" style="text-align: center;">{{row.nameCategorie}}
+			 </td>
+			 </tr>
+		</thead>
+		</table>
+		 </ul>
+                     
+          </div>
+         </div>
+        </div> 
+	
+				<br>	
+			 <div class="large-padded-row">
+              
+                
+		<div ng-controller="MainController">
+				<div class="padded-row">
+              <angucomplete id="ex1"
+			  placeholder="Search produits"
+              pause="100"
+              selectedobject="selectedProduit"
+              localdata="produits"
+              searchfields="nameProduit"
+              titlefield="nameProduit"
+              minlength="1"
+              inputclass="form-control form-control-small"/>
+                </div>
+                <div class="" ng-show="selectedProduit">
+                    You selected <span class="bold-span">{{selectedProduit.originalObject.name}}</span> which has a produit code of <span class="bold-span">{{selectedProduit.originalObject.description}}</span>
+                </div>
+
+ 
+            </div></div>
+             
+			
+<h2 ng-if= "hasAnyRole('SUPERADMIN')">Trouvez votre produit </h2>
+			
+<!-- 	<div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+	
+	
+	 
+	    <table class="table table-striped text-center">
+	    <thead>
+	        <tr ng-if="searchResult.totalElements > 0">
+				<th class="col-md-0 text-center">{{}}</th>
+	            <th class="col-md-3 text-center">{{'PRODUIT.NAME' | translate}}</th>
+	            <th class="col-md-3 text-center">{{'PRODUIT.DESCRIPTION' | translate}}</th>
+				
+	          
+	            <th class="col-md-3 text-center">{{'CRECHE.ACTIONS' | translate}}</th>
+	        </tr>
+	    </thead>
+	    <tr ng-repeat="produit in searchResult.content | filter: produit ">
+			<td>{{$index+1}} </td>
+	        <td>{{produit.nameProduit}}</td>
+	       <td>{{produit.description}}</td>
+		    <td>
+	            <div class="btn-group">
+	                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                    {{'COMMON.ACTIONS' | translate}}
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+
+                        <!-- <li role="separator" class="divider"></li>
+
+						<li>
+                            <a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" href="#!/produit/{{produit.id}}/documentation/home" >
+                            	<span class="glyphicon glyphicon-info-sign"></span> {{'CRECHE.MANAGE_INFORMATION' | translate}}
+                           	</a>
+                        </li>
+					    <li>
+	                        <a href="#!/produit/edit/{{produit.id}}" >
+                            <p  ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"><span class="glyphicon glyphicon-edit"></span> {{'COMMON.EDIT' | translate}}</p>
+                           
+                        	</a>
+	                    </li>
+	                    <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+	                        <a href="" ng-click="remove(produit)" >
+	                        	<span class="glyphicon glyphicon-trash"></span> {{'COMMON.REMOVE' | translate}}
+                        	</a>
+							http://localhost:10000/#!/categorieToProduit/20/produit
+	                    <!-- </li>  
+							
+	                </ul>
+	            </div>
+	        </td>
+	    </tr>
+	</table> -->
+		            
+         
+</div>

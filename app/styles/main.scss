@@ -1,0 +1,499 @@
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+// Form for sign in
+body {
+    background-color: #FFFFFF;
+	padding-top: 10px;
+	
+	background-size : 100%;
+    font-family: 'Times New Roman';
+}
+
+.catsandstars {
+ 
+  background-repeat: no-repeat;
+  background-size: 1000px;
+    background-position:  center;   
+    margin: auto;
+  
+}
+.catsandstars1 {
+  background-image:  url(../images/PERS-INT2-jaune.jpg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+    background-position:  center;   
+    margin: auto;
+	
+  
+}
+.catsandstars3 {
+background-repeat: no-repeat;
+background-position:  60px 220px  ;     
+background-size: 100%;
+margin: auto;
+  
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:1; 
+	box-shadow:0 0 0; 
+	border-color:red;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+	border-color:#000000;
+}
+
+
+
+
+.catsandstars2 {
+  background-image:  url(../images/bb.jpg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+   
+   background-position:  center;   
+  
+  
+}
+.frise {
+  background-image: url(../images/frise.png);  
+  background-repeat: repeat-y;
+   background-size: 100px;
+   background-position:  60px 220px  ;   
+  
+  
+}
+.frise1 {
+  background-image: url(../images/frise.png);  
+  background-repeat: repeat-y;
+   background-size: 100px;
+   background-position:  1420px 220px  ;   
+  
+  
+}
+p {
+    font-family: 'Arial';
+	
+   
+}
+
+label  {
+color: #6495ED;
+}
+.container {
+    max-width: 100%;
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.container1 {
+    
+	max-width: 90%;
+    padding-right: 50px;
+    
+    padding-left: 190px;
+}
+a, a:hover, a:focus, a:active{
+	color:red;
+}
+
+header {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+
+    h1 {
+        float: right;
+        color: #8A2BE2;
+        margin-top: 47px;
+    }
+    img {
+        height: 20px;
+		 float: left;
+		  margin-top: 0px;
+    }
+	
+    a.logo {
+    	float: left;
+    }
+
+    .flags a {
+        text-transform: uppercase;
+    }
+
+    .flags .current {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.navbar-inverse .navbar-nav > li > a{
+	padding: 0px;
+	padding-right: 80px;
+	padding-left: 80px;
+	color:black;
+}
+
+.navbar-inverse .navbar-nav > .open > a{
+    background-color: #000000;
+    color: #00FFFF;
+}
+
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+	background-color: DarkTurquoise;
+	color: #8A2BE2;
+}
+
+.navbar {
+	min-height:150px;
+	border: 1px solid #FFFFFF;
+	background-color:#FFFFFF;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: #8A2BE2;
+}
+
+.badge {
+	background-color:#000000;
+		
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-top: solid 1px #E8E8E8;
+}
+
+h1 {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    display: inline;
+    color:#00FFFF;
+	font-family: 'serif';
+}
+
+h2 {
+   
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'serif';
+    color: #000000;
+    font-size: 24px;
+    margin: 5px;
+}
+h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    margin: 0px;
+    text-decoration: underline;
+    font-family: 'serif';
+}
+h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: italic;
+    color: #8A2BE2;
+}
+
+.errorDialog .modal-title {
+    color: red;
+    padding: 0px;
+}
+
+.confirmDialog .modal-title {
+    color: #FF9900;
+    padding: 0px;
+}
+
+.ng-invalid .ng-active {
+    color: red;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+   
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+
+form[name=manageProduitForm],
+form[name=manageProduitFileForm], 
+form[name=manageProduitInformationForm],  
+form[name=manageCategorieForm],
+form[name=manageObjetForm],
+form[name=managePieceForm],
+form[name=managePieceFileForm],
+form[name=managePieceInformationForm],
+form[name=manageFamilleForm],
+
+form[name=manageUserForm],
+form[name=manageChoosePopupForm],
+.messagePopup {
+    width: 800px;
+    padding-top: 30px;
+    margin: auto;
+}
+
+form[name=signInForm]{
+    width: 300px;
+    padding-top: 200px;
+	padding-bottom:110px;
+	margin-left: 50%;
+
+	
+}
+
+
+
+.timepickerDisabled{
+	margin-top:33px;
+}
+
+table.legend{
+	list-style:none;
+	margin: 50px 0 0 0;
+}
+
+table.legend span{
+	width: 50px;
+	height: 20px;
+	margin: 0 10px 0 10px;
+	display:inline-block;
+}
+
+.row{
+	margin: 10px 0;
+}
+
+.notifications li {
+	position:relative;
+	padding:3px 100px 3px 0;
+	height: 30px;
+}
+.notifications li a{
+	padding: 3px 15px 3px 20px;
+}
+.notifications li button.read{
+	position: absolute;
+	right: 40px;
+	display: block;
+	margin: 0 5px;
+	height: 26px;
+	padding: 3px 10px;
+}
+
+.notifications li button.trash{
+	position: absolute;
+	right: 0px;
+	display: block;
+	margin: 0 5px;
+	height: 26px;
+	padding: 3px 10px;
+}
+.notifications li button.readAll,
+.notifications li button.trashAll{
+	display: block;
+	margin: 0 5px;
+	height: 26px;
+	padding: 3px 10px;
+	float: left;
+}
+
+a {
+	cursor: pointer;
+	color : #000000;
+}
+
+.fc-axis,
+.noLink{
+	cursor: default !important;
+}
+.noMargin{
+	margin:0 !important;
+}
+
+.fc-time-grid-event{
+	margin:0 10px 0 0;
+}
+.editable .fc-widget-content{
+	cursor: pointer;
+}
+.event-unavailable{
+	margin:0;
+}
+
+.fc-event-container .actif{
+	border:3px dotted #000000;
+	border-color:#000000 !important;
+}
+
+.bookingDurationStoring{
+	margin-bottom:38px;
+}
+
+.btn-primary {
+    color: #00CED1;
+    background-color: #ffffff;
+    border-color: #00CED1;
+}
+
+.cent{
+ text-align: center;
+}
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.open > .btn-primary.dropdown-toggle:hover,
+.open > .btn-primary.dropdown-toggle:focus,
+.open > .btn-primary.dropdown-toggle.focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    color: #00CED1;
+    background-color: #ffffff;
+    border-color: #00CED1;
+}
+
+.form-control:focus {
+    border-color: #00CED1;
+}
+
+.btn-link {
+    color: #00CED1;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    z-index: 2;
+    background-color: #00CED1;
+    border-color: #00CED1;
+}
+
+.form-control:focus, .btn:focus, .btn:active, .btn.active, .btn:focus:active {
+    outline: none;
+    background-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.form-control {
+    outline: 0;
+    border-color: #ECECEC;
+    border-style: solid;
+    border-width: 1px;
+    width: 95%;
+    background-color: #ffffff;
+    padding: 6px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.angucomplete-holder {
+    position: relative;
+}
+
+.angucomplete-dropdown {
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    width: 500px;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    /*top: 32px;
+    left: 0px;
+    */
+    margin-top: -6px;
+    background-color: #ffffff;
+}
+
+.angucomplete-searching {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.angucomplete-description {
+    font-size: 14px;
+}
+
+.angucomplete-row {
+    padding: 5px;
+    color: #000000;
+    margin-bottom: 4px;
+    clear: both;
+}
+
+.angucomplete-selected-row {
+    background-color: red;
+    color: #ffffff;
+}
+
+.angucomplete-image-holder {
+    padding-top: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.angucomplete-image {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border-color: #ececec;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.angucomplete-image-default {
+    /* Add your own default image here
+     background-image: url('/assets/default.png');
+    */
+    background-position: center;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+
+

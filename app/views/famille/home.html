@@ -1,0 +1,69 @@
+<div class= "container1">
+    <h2>{{'FAMILLE.LIST' | translate}}</h2>
+
+ 
+
+<div class="actions">
+        <p class="text-right">
+			
+             <p class="text-right">
+			 			 
+            <a ng-href="#!/famille/create" class="btn btn-primary">
+                <span class=" btn-primary glyphicon glyphicon-plus"></span> {{'COMMON.ADD' | translate}}
+            </a>
+			<a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"  ng-href="#!/famille/home" class="btn btn-primary">
+              <span class=" btn-primary glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+		
+    </div>
+	
+
+    <div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+<!-- 	<label ng-show="searchResult.totalElements > 0 && hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">{{'ACCEUIL.RECHERCHE' | translate}} <input ng-model="famille.nameFamille" class="form-control"></label> -->
+	
+	 
+	    <table class="table table-striped text-center">
+	    <thead>
+	        <tr ng-if="searchResult.totalElements > 0">
+				
+	            <th class="col-md-3 text-center">{{'FAMILLE.NAME' | translate}}</th>
+				
+				 <th class="col-md-3 text-center">{{'FAMILLE.CODENUMBER' | translate}}</th> 
+	            <th class="col-md-3 text-center">{{'FAMILLE.ACTIONS' | translate}}</th>
+	        </tr>
+	    </thead>
+	    <tr ng-repeat="famille in searchResult.content | filter: famille ">
+			
+	        <td>{{famille.name}}</td>
+				
+			
+			<td>{{famille.codeNumberString}}</td>  
+	           <td>
+	            <div class="btn-group">
+	                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                    {{'COMMON.ACTIONS' | translate}}
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+
+                        <li role="separator" class="divider"></li>
+												
+					    <li>
+	                        <a href="#!/famille/edit/{{famille.id}}" >
+                            <p  ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"><span class="glyphicon glyphicon-edit"></span> {{'COMMON.EDIT' | translate}}</p>
+
+                        	</a>
+	                    </li>
+	                    <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+	                        <a href="" ng-click="remove(famille)" >
+	                        	<span class="glyphicon glyphicon-trash"></span> {{'COMMON.REMOVE' | translate}}
+                        	</a>
+	                    </li>
+						
+	                </ul>
+	            </div>
+	        </td>
+	    </tr>
+	</table>
+</div>

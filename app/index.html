@@ -1,0 +1,366 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>.: BIBLIOTHEQUE_ALTEMPO :.</title>
+    <meta name="description" content="Trouver votre produit !">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="/bower_components/ngtoast/dist/ngToast.css" />
+    <link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.css" />
+    <link rel="stylesheet" href="/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" />
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css" />
+    <link rel="stylesheet" href="/bower_components/angular-ui-select/dist/select.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+	<!-- <link rel="stylesheet" href="styles/angucomplet.css"> -->
+    <!-- endbuild -->
+	
+	   
+</head>
+
+<body ng-app="biblioWebApp" ng-cloak>
+		
+    <toast></toast>
+
+
+    
+<header>
+          
+            <!-- Single button -->
+<div class="col-md-12" ng-if="session.loggedIn">
+<div class="col-md-1 " style="text-align: center;">
+			
+			 </div>			
+			<div class="col-md-1 ">
+			<a href="#!/" class="logo">
+                <img src="images/logo.jpg">
+            </a>
+			</div>  
+			
+	 <div ng-if= "hasAnyRole('BE', 'COMMERCIAL', 'AID_COMMERCIAL', 'CHARGE_AFFAIRE', 'CONDUCTEUR_TRAVAUX', 'AID_BE', 'AID_CHARGE_AFFAIRE')" class="col-md-8 " style="text-align: center;"> <h2>Bibliotheque des Produits Altempo </h2>	</div>		
+		
+		
+			<div class="col-md-2 " style="text-align: center;">
+			<li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+                             <a href="#!/categorie/home">Gestion des Catégories</a> 
+
+            </li>
+			 </div>
+			 
+			 <div class="col-md-2" style="text-align: center;">
+			<li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+                             <a href="#!/produit/home">Gestion des Produits</a> 
+
+            </li>
+			</div>
+			 <div class="col-md-2" style="text-align: center;">
+			
+			
+			<li class="dropdown" ng-if="hasAnyRole('SUPERADMIN')">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{'COMMON.MANAGEMENT' | translate}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+                             <a href="#!/objet/home">Gestion des Objets</a> 
+
+            </li>
+			<li role="separator" class="divider"></li>
+                                <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+                             <a href="#!/famille/home">Gestion des Sous-Familles</a> 
+
+            </li>
+			<li role="separator" class="divider"></li>
+								<li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+                             <a href="#!/piece/home">Gestion des Pieces</a> 
+
+            </li>
+                                
+                                
+                            </ul>
+                        </li>
+						
+			</div>
+			<div class="col-md-2" style="text-align: center;">
+			<li class="dropdown" ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+		
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Utilisateurs<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+								<li><a href="#!/user/COMMERCIAL/home">{{'COMMERCIAL' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/ADMINISTATEUR/home">{{'ADMINISTRATEUR' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/AID_COMMERCIAL/home">{{'AID_COMMERCIAL' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/CHARGE_AFFAIRE/home">{{'CHARGE_AFFAIRE' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/CONDUCTEUR_TRAVAUX/home">{{'CONDUCTEUR_TRAVAUX' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/BE/home">{{'BE' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/AID_BE/home">{{'AID_BE' | translate}}</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#!/user/AID_CHARGE_AFFAIRE/home">{{'AID_CHARGE_AFFAIRE' | translate}}</a></li>
+                              
+                             
+                            </ul>
+							</div>
+		
+                        </li>
+						
+			
+
+						
+			<div class="col-md-1">
+						   <li class="dropdown" ng-if="session.loggedIn">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                            <li><a href="" ng-controller="SignOutCtrl" ng-click="signOut()">{{'SIGN_OUT.PROCESS' | translate}}</a></li>
+                          </ul>
+            </li>
+		</div>
+		
+
+		</div>
+	 </header>       
+<div class=" col-md-12 navbar navbar-inverse" ng-if="session.loggedIn">
+				<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav col-md-1">
+
+									 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat14.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/27/concerned"  >Gros oeuvre (GO)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat3.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/28/concerned" >Aménagement extérieur (EXT)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat4.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/29/concerned" >Aménagement intérieur (INT)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat82.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a  href="#!/categorieToProduit/30/concerned"  >Equipement modules ISO (MYC)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat73.jpg" style="width: 90px; height: auto;">
+				 </div>
+					 <a class = "cent" href="#!/categorieToProduit/31/concerned" >Chauffage/ventilation/ climatisation (CVC)</a>
+					 
+				</ul>	
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat61.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/32/concerned" >Courant fort/faible (ELEC)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat2.png" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/33/concerned">Clôture/portail (CLO)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat101.jpg" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/35/concerned" style="text-align: center;">Cloisonnement chantier (CCH)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat91.jpg" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/36/concerned" >Produit numérique (NUM)</a>
+					 
+				</ul>
+<ul class="nav navbar-nav col-md-1 cent">
+
+				 <div class="brick-logo">
+						<img src="images/cat102.jpg" style="width: 90px; height: auto;">
+				 </div>
+					 <a href="#!/categorieToProduit/37/concerned" >Réalisation spécifique (SPE)</a>
+					 
+				</ul>	
+
+				
+				  </div>
+			<br>	  
+<div class=" col-md-12 padded-row">
+          
+		   <div  class="col-md-1">
+		   </div>
+		 <div  class="col-md-5" ng-controller="AutoComCtrl" >
+			<div class="padded-row">
+              <angucomplete id="ex1"
+				
+			  placeholder="Recherche de produit"
+              pause="100"
+              selectedobject="selectedProduit"
+              localdata="searchResult.content"
+              searchfields="reference,nameProduit"
+			  
+              titlefield  ="reference,nameProduit" 
+              minlength="1"
+			  inputclass="form-control form-control-small" 
+			   match-class="highlight"	   
+				/>
+                </div>
+			
+			 
+            </div> 
+	 <div  class="col-md-5" ng-controller="AutoComPieceCtrl" >
+			<div class="padded-row">
+              <angucomplete2 id="ex1"
+				
+			  placeholder="Recherche de piece"
+              pause="100"
+              selectedobject="selectedPiece"
+              localdata="searchResult.content"
+              searchfields="reference,name"
+			  
+              titlefield  ="reference,name" 
+              minlength="1"
+			  inputclass="form-control form-control-small" 
+			   match-class="highlight"/>
+                </div>
+			
+			 
+            </div>	
+
+<div  class="col-md-1">
+		   </div>			
+				</div>
+				 </div>
+				 
+
+  
+				</div>  
+    
+
+ <div ng-view="" style="min-height: 1250px;"></div>
+        <div>
+		<footer>
+            <p align="center" ng-if="session.lastConnectionDate">{{'COMMON.LAST_CONNECTION_DATE' | translate}} {{session.lastConnectionDate | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+            <p align="center">&copy; <a href="http://www.altempo.com" target="_blank">Altempo</a> 2018. - v{{applicationVersion}}</p>
+		</footer>
+        </div>
+        
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="/bower_components/angular-translate/angular-translate.js"></script>
+    <script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="/bower_components/bootbox/bootbox.js"></script>
+    <script src="/bower_components/angular-base64/angular-base64.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="/bower_components/ngtoast/dist/ngToast.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <script src="/bower_components/ng-utilities/dist/ng-utilities.js"></script>
+    <script src="/bower_components/angular-i18n/angular-locale_fr-fr.js"></script>
+    <script src="/bower_components/sockjs/sockjs.js"></script>
+    <script src="/bower_components/stomp-websocket/lib/stomp.min.js"></script>
+    <script src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="/bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script src="/bower_components/angular-sockjs/src/index.js"></script>
+    <script src="/bower_components/angular-base64-upload/src/angular-base64-upload.js"></script>
+    <script src="/bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+    <script src="/bower_components/Chart.js/Chart.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="/bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="/bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="/bower_components/ng-country-select/dist/ng-country-select.js"></script>
+    <script src="/bower_components/downloadjs/download.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/angular-auto-complete/angular-auto-complete.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+    <script src="scripts/config.js"></script>
+	<script src="directives/datePicker.js"></script>
+	<script src="directives/angucomplete.js"></script>
+	<script src="directives/angucomplete2.js"></script>
+	<script src="directives/loader.js"></script>
+	<script src="filters/pointedTimeToTime.js"></script>
+	<script src="filters/secondsToDateTime.js"></script>
+    <script src="scripts/services/security.js"></script>
+	<script src="scripts/services/user.js"></script>
+	<script src="scripts/services/produit.js"></script>
+	<script src="scripts/services/famille.js"></script>
+	<script src="scripts/services/objet.js"></script>
+	<script src="scripts/services/piece.js"></script>
+	<script src="scripts/services/produitCat.js"></script>
+	<script src="scripts/services/categorie.js"></script>
+	<script src="scripts/services/categorieToProduit.js"></script>
+    <script src="scripts/services/ctrldata.js"></script>
+	<script src="scripts/services/autocomplete.js"></script>
+	<script src="scripts/services/autocompletePiece.js"></script>
+    <script src="scripts/controllers/security.js"></script>
+	<script src="scripts/controllers/produit.js"></script>
+	<script src="scripts/controllers/famille.js"></script>
+	<script src="scripts/controllers/objet.js"></script>
+	<script src="scripts/controllers/piece.js"></script>
+	<script src="scripts/controllers/produitCat.js"></script>
+	<script src="scripts/controllers/categorie.js"></script>
+	<script src="scripts/controllers/categorieToProduit.js"></script>
+	<script src="scripts/controllers/user.js"></script>
+    <script src="scripts/controllers/language.js"></script>
+	<script src="scripts/controllers/autocomplete.js"></script>
+	<script src="scripts/controllers/autocompletePiece.js"></script>
+	
+	
+    <!-- endbuild -->
+</body>
+
+
+</html>

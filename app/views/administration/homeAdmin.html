@@ -1,0 +1,30 @@
+<div class="" >
+<h2 ng-if= "hasAnyRole('SUPERADMIN')">Trouvez votre produit </h2>
+    
+<h4> {{'Trouvez votre produit' | translate}}</h4>
+<li class="dropdown" ng-if="hasAnyRole('SUPERADMIN')">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{'COMMON.MANAGEMENT' | translate}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+					          <li><a href="#/user/COMMERCIAL/home">{{'COMMERCIAL' | translate}}</a></li>
+							  <li><a href="#/user/ADMINISTATEUR/home">{{'ADMINISTRATEUR' | translate}}</a></li>
+                                <li><a href="#/user/AIDCOM/home">{{'AIDCOM' | translate}}</a></li>
+								<li><a href="#/user/CHAF/home">{{'CHAF' | translate}}</a></li>
+								<li><a href="#/user/CDTR/home">{{'CDTR' | translate}}</a></li>
+								<li><a href="#/user/BE/home">{{'BE' | translate}}</a></li>
+								<li><a href="#/user/AIDBE/home">{{'AIDBE' | translate}}</a></li>
+								<li><a href="#/user/AIDCHAF/home">{{'AIDCHAF' | translate}}</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#/categorie/home">{{'CATEGORIE' | translate}}</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="../images/imgSup.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Nom du produit</h5>
+    <p class="card-text">Exemple d'un petit descriptif du produit.</p>
+    <a href="#" class="btn btn-primary">Voir details</a>
+  </div>
+</div>
+
+</div>

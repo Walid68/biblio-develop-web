@@ -1,0 +1,160 @@
+<div class = "container1">
+ <div class="actions">
+        <p class="text-right">
+            <a class="btn btn-primary" href="#!/home">
+                <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+    </div>
+<div>
+
+		
+<div>
+<div   class="col-md-4"> 
+	<form >
+	
+	
+	<div> 	
+			
+			<a href="" ng-click="openLightboxModal(apiUrl + '/piece/' + piece.id + '/information/imageData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/piece/{{piece.id}}/information/imageData" style="max-width: 500px; max-height: 250px">
+			</p>
+				<br>
+					
+            	</a>
+				<!-- <a href="" ng-click="openLightboxModal(apiUrl + '/piece/' + piece.id + '/information/photoData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/piece/{{piece.id}}/information/photoData" style="max-width: 500px; max-height: 250px">
+			</p>
+					
+            	</a> -->
+            
+		</div> 	
+		<br/><br/>
+		
+	<div > 		   
+				<h3> {{'PIECE.VIDEO' | translate}}</h3>
+				<p style="text-align:center;">
+				<iframe width="500" height="250" ng-src="{{getVideoLink()}}" frameborder="0" allowfullscreen></iframe>
+				</p>
+  
+        </div> 	
+</form>
+
+</div>
+
+
+<div  class="col-md-8">
+   
+    
+
+ 
+ <form>
+		
+		
+		<div class="form-group col-md-12">
+	
+			<div  class="col-md-2"  >
+					
+			 
+            </div>
+			<div  class="col-md-8"  >
+					
+			
+           
+			 <p  > <font size="4" > {{managedPiece.reference +' '+ ':'+' '+ managedPiece.name | uppercase  }}<p/>
+			  </div>
+			<div  class="col-md-2"  >
+					
+			 
+            </div>
+		
+		</div>		
+       <div class="form-group col-md-12">
+	
+			<label  for="pieceDescription">{{'PIECE.DESCRIPTION' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedPiece.description}} <p/>
+		
+		
+		</div> 
+		
+		<div class="form-group col-md-12">
+			<div  class="col-md-4"  >
+			<label  for="pieceNameFournisseur">{{'PIECE.NAMEFOURNISSEUR' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedPiece.nameFournisseur}} <p/>		
+			 
+            </div>
+			<div  class="col-md-4"  >
+					<label  for="pieceReferenceFournisseur">{{'PIECE.REFERENCEFOURNISSEUR' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedPiece.referenceFournisseur}} <p/>	
+			 
+            </div>
+			
+			<div  class="col-md-4"  >
+				<label  for="piecePrixFournisseur">{{'PIECE.PRIXFOURNISSEUR' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedPiece.prixFournisseur}} <p/>	
+			 	
+			 
+            </div>
+		
+		</div>
+		<div  class=" form-group col-md-12"  >
+					
+			 <label  for="pieceDescription">{{'PIECE.DETAILFOURNISSEUR' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedPiece.detailFournisseur}} <p/>	
+			 
+            </div>		
+	
+<div  class="form-group col-md-12 ">
+ <table class="table table-striped text-center " >
+	<thead>
+		<tr>
+			
+			<th class="col-md-3 text-center">{{'PIECE.FILE.NAME' | translate}}</th>
+			<th class="col-md-7 text-center">{{'PIECE.FILE.TYPE' | translate}}</th>
+			<!-- <th class="col-md-3 text-center">{{'PIECE.FILE.DATE' | translate}}</th> -->
+			<th class="col-md-2 text-center">{{'COMMON.ACTIONS' | translate}}</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="file in files">
+		
+		<td>{{file.name}}</td>
+		<td>{{file.type}}</td>
+		<!-- <td>{{file.date}}</td> -->
+		
+		<td>
+			<div class="btn-group">
+					<li>
+						<a href="#!/piece/{{piece.id}}/documentation/{{file.id}}/view" target=_blank>
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW1' | translate}}
+						</a>
+					</li>
+				
+			</div>
+		</td>
+	</tr>
+</table>
+ </div>
+			
+			<div class=" form-group col-md-12">
+			<label for="pieceName">{{'PIECE.VIDEO' | translate}}</label>
+		
+			 <li>
+						<a href="{{pieceInformation.videoLink }}" target=_blank>
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW3' | translate}}
+						</a>
+					</li>
+			
+			
+		</div>
+		
+
+ 
+	</form >
+	
+	
+	</div>
+	</div>

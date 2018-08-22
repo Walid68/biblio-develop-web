@@ -1,0 +1,194 @@
+<div class = "container1">
+ <div class="actions">
+        <p class="text-right">
+            <a class="btn btn-primary" href="#!/home">
+                <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+    </div>
+
+
+			
+<div class = "col-md-12">
+<div   class="col-md-4"> 
+	<form >
+	
+	
+	<div> 	
+			
+			<a href="" ng-click="openLightboxModal(apiUrl + '/produit/' + produit.id + '/information/imageData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/produit/{{produit.id}}/information/imageData" style="max-width: 500px; max-height: 250px">
+			</p>
+				<br>
+<br>	<br>						
+            	</a>
+				<a href="" ng-click="openLightboxModal(apiUrl + '/produit/' + produit.id + '/information/photoData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/produit/{{produit.id}}/information/photoData" style="max-width: 500px; max-height: 250px">
+			</p>
+					
+            	</a>
+            
+		</div> 	
+		<br/><br/>
+		
+	<div > 		   
+				<h3> {{'PRODUIT.VIDEO' | translate}}</h3>
+				<p style="text-align:center;">
+				<iframe width="500" height="250" ng-src="{{getVideoLink()}}" frameborder="0" allowfullscreen></iframe>
+				</p>
+  
+        </div> 	
+</form>
+
+</div>
+
+
+<div  class="col-md-8">
+   
+   
+ <form>
+		
+		
+		<div class="form-group col-md-12">
+	
+			<div  class="col-md-2"  >
+					
+			 
+            </div>
+			<div  class="col-md-8"  >
+					
+			 
+           
+			 <p  > <font size="4" > {{managedProduit.reference +' '+ ':'+' '+ managedProduit.nameProduit | uppercase  }}<p/>
+			  </div>
+			<div  class="col-md-2"  >
+					
+			 
+            </div>
+		
+		</div>		
+       <div class="form-group col-md-12">
+	
+			<label  for="produitDescription">{{'PRODUIT.DESCRIPTION' | translate}}</label><br/>
+	   		<p > <font size="3" > {{managedProduit.description}} <p/>
+		
+		
+		</div> 
+		
+	
+<div  class="form-group col-md-12 ">
+ <table class="table table-striped text-center " >
+	<thead>
+		<tr>
+			
+			<th class="col-md-3 text-center">{{'PRODUIT.FILE.NAME' | translate}}</th>
+			<th class="col-md-7 text-center">{{'PRODUIT.FILE.TYPE' | translate}}</th>
+			<!-- <th class="col-md-3 text-center">{{'PRODUIT.FILE.DATE' | translate}}</th> -->
+			<th class="col-md-2 text-center">{{'COMMON.ACTIONS' | translate}}</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="file in files">
+		
+		<td>{{file.name}}</td>
+		<td>{{file.type}}</td>
+		<!-- <td>{{file.date}}</td> -->
+		
+		<td>
+			<div class="btn-group">
+					<li>
+						<a href="#!/produit/{{produit.id}}/documentation/{{file.id}}/view" target=_blank>
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW1' | translate}}
+						</a>
+					</li>
+				
+			</div>
+		</td>
+	</tr>
+</table>
+ </div>
+			
+			<div class=" form-group col-md-12">
+			<label for="produitName">{{'PRODUIT.VIDEO' | translate}}</label>
+		
+			 <li>
+						<a href="{{produitInformation.videoLink }}" target=_blank>
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW3' | translate}}
+						</a>
+					</li>
+			
+			
+		</div>
+		
+		<!-- <div  class="form-group col-md-12">
+		
+                <label for="produitToPiece">{{'PRODUIT.PIECE' | translate}}</label>
+
+                <ui-select multiple ng-click="selectPiec()" ng-model="managedProduit.pieces" theme="bootstrap">
+                    <ui-select-match>{{$item.reference +' '+ $item.name}}</ui-select-match>
+                    <ui-select-choices repeat="" >
+                        <span ng-bind="piece.code +' '+ piece.name"></span>
+                    </ui-select-choices>
+                </ui-select>
+				
+            </div>   -->
+<div ng-model="managedProduit.pieces" class="form-group col-md-12">
+ <table class="table table-striped text-center">
+ <label for="produitPieceList">{{'PRODUIT.PIECELIST' | translate}}</label>
+	<thead>
+		<tr>
+			
+			<th class="col-md-3 text-center">{{'PIECE.REFERENCE' | translate}}</th>
+			<th class="col-md-7 text-center">{{'PIECE.NAME' | translate}}</th>
+			<!-- <th class="col-md-3 text-center">{{'PIECE.IMAGE' | translate}}</th> -->
+			<th class="col-md-2 text-center">{{'COMMON.ACTIONS' | translate}}</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="piece in managedProduit.pieces">
+		
+		<td>{{piece.reference}}</td>
+		<td>{{piece.name}}</td>
+		
+		<!-- <td><div> 	
+			
+			 <a href="" ng-click="openLightboxModal(apiUrl + '/piece/' + piece.id + '/information/imageData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/piece/{{piece.id}}/information/imageData" style="max-width: 100px; max-height: 50px">
+			</p>
+					
+            	</a> 
+            
+		</div> 
+		</td> -->
+		<td>
+			<div class="btn-group">
+				
+					<li>
+						<a href="#!/piece/view/{{piece.id}}" target=_blank >
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW2' | translate}}
+						</a>
+						
+						</li>
+					
+				
+				
+					
+					
+				
+			</div>
+		</td>
+	</tr>
+</table>
+ </div>
+ 
+	</form >
+	</div>
+	
+	</div>
+	</div>
+	
+ 

@@ -1,0 +1,16 @@
+<h2 class="text-center">{{'PIECE.FILE.' + operationMode | translate}}</h2>
+<div class ="container1">
+<div class="actions">
+    <p class="text-right">
+        <a class="btn btn-primary" href="#!/piece/{{pieceId}}/documentation/home">
+            <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+        </a>
+    </p>
+</div>
+
+<p>Fichier : {{ managedFile.name }}</p>
+<p>Type de fichier : {{ managedFile.type}}</p>
+<p ng-if="managedFile.validationText">Commentaire : {{managedFile.validationText}}</p>
+
+<a href="" ng-click="download()">Télécharger</a>
+</div>

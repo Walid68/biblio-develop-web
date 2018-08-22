@@ -1,0 +1,75 @@
+<div class= "container1">
+    <h2>{{'USER.LIST.COMMERCIAL' | translate}}</h2>
+
+ <br><br>
+
+	  <div ng-if="searchResult.totalElements == 0" class="col-md-12 actions">
+        <p class="text-right">
+            <a ng-href="#!/user/{{role}}/create" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> {{'COMMON.ADD' | translate}}
+            </a>
+            <a ng-if="hasAnyRole('SUPERADMIN','ADMINCRECHE')"  ng-href="#/creche/home" class="btn btn-primary">
+              <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+		 </p>
+    </div>
+
+	 <div ng-if="searchResult.totalElements > 0" class="actions">
+        <p class="text-right">
+            <a ng-href="#!/user/{{role}}/create" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> {{'COMMON.ADD' | translate}}
+            </a>
+            <a ng-if="hasAnyRole('SUPERADMIN')"  ng-href="#/home" class="btn btn-primary">
+              <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+		 </p>
+    </div>
+	
+	
+    <div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+<div>	<label ng-show="searchResult.totalElements > 0" >{{'ACCEUIL.RECHERCHE_3' | translate}} <input ng-model="row.name" class="form-control"></label> </div>
+    <table class="table table-striped text-center">
+	 <thead>
+            <tr ng-if="searchResult.totalElements > 0">
+				<th class="col-md-1 text-center">{{}}</th>
+                <th class="col-md-4 text-center">{{'USER.GENERALE.FULL_NAME' | translate}}</th>
+                <th class="col-md-4 text-center">{{'USER.GENERALE.MAIL' | translate}}</th>
+                
+                <th class="col-md-3 text-center">{{'COMMON.ACTIONS' | translate}}</th>
+            </tr>
+        </thead>
+		  <tr ng-repeat="row in searchResult.content | filter: row.name">
+		  <td>{{$index+1}} </td>
+           <td>{{row.fullName | uppercase}}</td>
+            <td><a ng-href="mailto:{{row.mail}}">{{row.mail}}</a></td>
+            
+            <td>
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'COMMON.ACTIONS' | translate}}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="" ng-click="generateNewPassword(row)">
+                            	<span class="glyphicon glyphicon-repeat"></span> {{'COMMON.GENERATE_NEW_PASSWORD' | translate}}
+                            </a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a ng-href="#!/user/{{role | lowercase}}/edit/{{row.id}}">
+                            	<span class="glyphicon glyphicon-edit"></span> {{'COMMON.EDIT' | translate}}
+                           	</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="remove(row)">
+                            	<span class="glyphicon glyphicon-trash"></span> {{'COMMON.REMOVE' | translate}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

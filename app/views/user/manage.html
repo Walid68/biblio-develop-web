@@ -1,0 +1,45 @@
+
+<div class = "container1">
+
+    <h2 class="text-center">{{'USER.' + operationMode + '.' +role | translate}}</h2>
+
+	
+	
+    <form name="manageUserForm" ng-submit="save(manageUserForm.$valid)">
+	 
+		
+        <div class="form-group">
+            <label>{{'USER.GENERALE.LAST_NAME' | translate}}</label>
+            <input type="text" name="lastName" placeholder="" ng-model="managedUser.lastName" required autofocus class="form-control" maxlength="32" />
+            <div ng-messages="manageUserForm.lastName.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{'USER.GENERALE.FIRST_NAME' | translate}}</label>
+            <input type="text" name="firstName" placeholder="" ng-model="managedUser.firstName" required class="form-control" maxlength="20" />
+            <div ng-messages="manageUserForm.firstName.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{'USER.GENERALE.MAIL' | translate}}</label>
+            <div class="input-group">
+				<input type="email" name="mail" placeholder="" ng-model="managedUser.mail" required class="form-control" ng-disabled="operationMode == 'EDIT'" maxlength="40" />
+				<span class="input-group-addon" id="basic-addon1">@</span>
+			</div>
+            <div ng-messages="manageUserForm.mail.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+        </div>
+
+       
+		 
+        <p class="text-center" ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+		    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"></span> {{'COMMON.SAVE' | translate}}</button>
+            <button type="button" class="btn btn-danger" ng-click="goBack()"><span class="glyphicon glyphicon-remove"></span> {{'COMMON.CANCEL' | translate}}</button>
+        </p>
+    </form>
+</div>

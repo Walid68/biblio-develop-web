@@ -1,0 +1,86 @@
+<div class="container1">
+    <h2>{{'PRODUIT.LIST' | translate}}</h2>
+
+ 
+<div class = "col-md-6"  ng-if = "searchResult.totalElements == 0"><p ><font size="4"> {{'ACCEUIL.PRODUIT_NULL' | translate}}</font><p/> </div>
+	  <div  class= "actions">
+	 
+        <p class="text-right">
+		
+          
+			<a   ng-href="#!/home" class="btn btn-primary">
+              <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+			
+		</p>
+	
+    </div>
+	
+
+    <div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+	<!-- <label ng-show="searchResult.totalElements > 0 && hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">{{'ACCEUIL.RECHERCHE_1' | translate}} <input ng-model="produit.nameProduit" class="form-control"></label> -->
+	
+	 
+	    <table class="table table-striped text-center">
+	    <thead>
+	        <tr ng-if="searchResult.totalElements > 0">
+				<th class="col-md-0 text-center">{{}}</th>
+	            <th class="col-md-3 text-center">{{'PRODUIT.NAME' | translate}}</th>
+	            <th class="col-md-3 text-center">{{'PRODUIT.DESCRIPTION' | translate}}</th>
+				<th ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" class="col-md-3 text-center">{{'PRODUIT.PHOTO' | translate}}</th>
+				 <!-- <th class="col-md-3 text-center">{{'CHILD.PICTURE1' | translate}}</th>  -->
+	          
+	            <th class="col-md-3 text-center">{{'CRECHE.ACTIONS' | translate}}</th>
+	        </tr>
+	    </thead>
+	    <tr ng-repeat="produit in searchResult.content | filter: produit ">
+			<td>{{$index+1}} </td>
+	        <td>{{produit.nameProduit}}</td>
+	       <td>{{produit.description}}</td>
+		   <td><a href="" ng-click="openLightboxModal(apiUrl + '/produit/' + produit.id + '/information/imageData')">
+            		 
+						<p style="text-align:center;">
+						<img ng-src="{{apiUrl}}/produit/{{produit.id}}/information/imageData" style="max-width: 80px; max-height: 45px">
+			</p>
+					
+            	</a>
+            </td>  
+		  <!--  <td><a href="" ng-click="openLightboxModal(apiUrl + '/produit/' + produit.id + '/picture')">
+            		<img style="max-width: 50px" ng-src="{{apiUrl}}/produit/' + produit.id + '/picture" />
+					<!-- data-ng-src="data:image/png;base64,{{pictureTemp.base64}}" 
+					
+            	</a>
+            </td>  -->
+	        <td ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+	            <div class="btn-group">
+	                <button type="button" class="btn  btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                    {{'COMMON.ACTIONS' | translate}}
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+
+                        <li role="separator" class="divider"></li>
+
+						<li>
+                            <a ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')" href="#!/produit/{{produit.id}}/documentation/home" >
+                            	<span class="glyphicon glyphicon-info-sign"></span> {{'CRECHE.MANAGE_INFORMATION' | translate}}
+                           	</a>
+                        </li>
+					    <li>
+	                        <a href="#!/produit/edit/{{produit.id}}" >
+                            <p  ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')"><span class="glyphicon glyphicon-edit"></span> {{'COMMON.EDIT' | translate}}</p>
+                           
+                        	</a>
+	                    </li>
+	                    <li ng-if="hasAnyRole('SUPERADMIN', 'ADMINISTRATEUR')">
+	                        <a href="" ng-click="remove(produit)" >
+	                        	<span class="glyphicon glyphicon-trash"></span> {{'COMMON.REMOVE' | translate}}
+                        	</a>
+	                    </li>
+							
+	                </ul>
+	            </div>
+	        </td>
+	    </tr>
+	</table>
+</div>

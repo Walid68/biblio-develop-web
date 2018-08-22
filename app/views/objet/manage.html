@@ -1,0 +1,41 @@
+<div class= "container1">
+
+    <h2 class="text-center">{{'OBJET.' + operationMode | translate}}</h2>
+
+
+    <div class="actions">
+        <p class="text-right">
+            <a class="btn btn-primary" href="#!/objet/home">
+                <span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+            </a>
+        </p>
+    </div>
+
+
+	<form name="manageObjetForm" ng-submit="save(manageObjetForm.$valid)">
+		<div class="form-group">
+			<label for="name">{{'OBJET.NAME' | translate}} </label>
+			<input type="text" name="name" class="form-control" ng-model="managedObjet.name" maxlength="40" required autofocus/>
+			<div ng-messages="manageObjetForm.name.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div>
+	
+	
+	  <div class="form-group">
+			<label for="code">{{'OBJET.CODE' | translate}}</label>
+			<input type="text" name="code" class="form-control" ng-model="managedObjet.code" maxlength="40" required autofocus/>
+			<div ng-messages="manageObjetForm.code.$error">
+                <div ng-messages-include="views/shared/messages.html"></div>
+            </div>
+		</div>
+
+		
+
+		<p class="text-center"  >
+            <button type="submit" class="btn btn-success text-center"><span class="glyphicon glyphicon-save"></span> {{'COMMON.SAVE' | translate}}</button>
+            <button type="button" class="btn btn-danger" ng-click="goBack()"><span class="glyphicon glyphicon-remove"></span> {{'COMMON.CANCEL' | translate}}</button>
+        </p>
+	</form>
+
+</div>

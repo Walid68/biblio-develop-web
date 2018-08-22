@@ -1,0 +1,49 @@
+<h2>{{'PIECE.FILE.LIST' | translate}}</h2>
+<div class = "container1">
+<div class="actions">
+	<p class="text-right">
+		<a class="btn btn-primary" href="#!/piece/home">
+			<span class="glyphicon glyphicon-chevron-left"></span> {{'COMMON.BACK' | translate}}
+		</a>
+		<a ng-if="hasAnyRole('ADMINISTRATEUR','SUPERADMIN')" ng-href="#!/piece/{{piece.id}}/documentation/create" class="btn btn-primary">
+			<span class="glyphicon glyphicon-plus"></span> {{'COMMON.ADD' | translate}}
+		</a>
+	</p>
+</div>
+
+<div ng-include="'views/shared/pagination.html'" class="pull-right" ng-if="searchResult.totalElements > 0"></div>
+
+<table class="table table-striped text-center">
+	<thead>
+		<tr>
+			
+			<th class="col-md-3 text-center">{{'PIECE.FILE.NAME' | translate}}</th>
+			<th class="col-md-3 text-center">{{'PIECE.FILE.DATE' | translate}}</th>
+			<th class="col-md-3 text-center">{{'PIECE.FILE.TYPE' | translate}}</th>
+			<th class="col-md-3 text-center">{{'COMMON.ACTIONS' | translate}}</th>
+		</tr>
+	</thead>
+	<tr ng-repeat="file in searchResult.content">
+		
+		<td>{{file.name}}</td>
+		<td>{{file.date | date:'dd-MM-yyyy'}}</td>
+		<td>{{file.type}}</td>
+		<td>
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{'COMMON.ACTIONS' | translate}}
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#!/piece/{{piece.id}}/documentation/{{file.id}}/view" >
+							<span class="glyphicon glyphicon-eye-open"></span> {{'COMMON.VIEW' | translate}}
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</td>
+	</tr>
+</table>
+</div>

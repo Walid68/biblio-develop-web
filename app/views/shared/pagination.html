@@ -1,0 +1,16 @@
+<nav>
+    <ul class="pagination">
+        <li class="disabled">
+            <a href="">
+                {{(searchResult.number * searchResult.size) + 1}} - {{(searchResult.number * searchResult.size) + searchResult.numberOfElements}} sur {{searchResult.totalElements}}
+            </a>
+        </li>
+        <li ng-show="searchResult.first" class="disabled"><span>&laquo;</span></li>
+        <li ng-hide="searchResult.first"><a href="" ng-click="search(searchResult.number - 1)">&laquo;</a></li>
+        <li ng-repeat="page in [searchResult.totalPages] | nguRange" class="{{page === searchResult.number ? 'active' : ''}}">
+            <a href="" ng-click="search(page)">{{page + 1}}</a>
+        </li>
+        <li ng-show="searchResult.last" class="disabled"><span>&raquo;</span></li>
+        <li ng-hide="searchResult.last"><a href="" ng-click="search(searchResult.number + 1)">&raquo;</a></li>
+    </ul>
+</nav>
