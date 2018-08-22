@@ -10,8 +10,7 @@
 
 ## Récupération et préparation du projet
 
-- Récupérer le projet sur le Git de Decasoft (git.decasoft.fr avec identifiants LDAP)
-- Commande git: `git clone -o decasoft git@git.decasoft.fr:altempo/gfoc.git --branch develop-web <rep-destination>`.
+
 - Lancer les commandes suivantes:
   - npm install
   - bower install
